@@ -1,0 +1,1706 @@
+<head><base href="">
+		<title>St Eurit</title>
+		<meta charset="utf-8" />
+		<meta name="description" content="SchoolZoid is an online school management system that saves you time and makes your school look professional ." />
+		<meta name="keywords" content="SchoolZoid is world's first fully online school management system with scheduler, parent portal, attendance, homework, grades, report card and more." />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="This school management software is for learning, administration, and management activities in schools, colleges, universities." />
+		<meta property="og:url" content="https://schoolzoid.co.zw" />
+		<meta property="og:site_name" content="SchoolZoid | Arioc Digital Agency" />
+		<link rel="canonical" href="https://schoolzoid.co.zw" />
+		<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+		<!--begin::Fonts-->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+		<!--end::Fonts-->
+		<!--begin::Page Vendor Stylesheets(used by this page)-->
+		<link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+		
+		<link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+		<!--end::Page Vendor Stylesheets-->
+		<!--begin::Global Stylesheets Bundle(used by all pages)-->
+		<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+		<!--end::Global Stylesheets Bundle-->
+	</head>
+	<!--end::Head-->
+	
+ <style>
+    
+.errors {
+    background: #e79892;
+    padding: 5px;
+    margin-bottom: 10px;
+    min-width: 200px;
+    display: inline-block;
+    border: 1px solid #e74c3c;
+  }
+  
+  .errors ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .success {
+    background: #80cca0;
+    padding: 5px;
+    margin-bottom: 10px;
+    min-width: 200px;
+    display: inline-block;
+    border: 1px solid black;
+  }
+</style>
+
+	<!--begin::Body-->
+	<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed" style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
+		<!--begin::Main-->
+		<!--begin::Root-->
+		<div class="d-flex flex-column flex-root">
+			<!--begin::Page-->
+			<div class="page d-flex flex-row flex-column-fluid">
+				<!--begin::Aside-->
+				<div id="kt_aside" class="aside aside-dark aside-hoverable" data-kt-drawer="true" data-kt-drawer-name="aside" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_aside_mobile_toggle">
+					<!--begin::Brand-->
+					<div class="aside-logo flex-column-auto" id="kt_aside_logo">
+						<!--begin::Logo-->
+						<a href="/clerk/dash">
+							<img alt="Logo" src="assets/media/logos/logo-1-dark.png" class="h-25px logo" />
+						</a>
+						<!--end::Logo-->
+						<!--begin::Aside toggler-->
+						<div id="kt_aside_toggle" class="btn btn-icon w-auto px-0 btn-active-color-primary aside-toggle" data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body" data-kt-toggle-name="aside-minimize">
+							<!--begin::Svg Icon | path: icons/duotune/arrows/arr079.svg-->
+							<span class="svg-icon svg-icon-1 rotate-180">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<path opacity="0.5" d="M14.2657 11.4343L18.45 7.25C18.8642 6.83579 18.8642 6.16421 18.45 5.75C18.0358 5.33579 17.3642 5.33579 16.95 5.75L11.4071 11.2929C11.0166 11.6834 11.0166 12.3166 11.4071 12.7071L16.95 18.25C17.3642 18.6642 18.0358 18.6642 18.45 18.25C18.8642 17.8358 18.8642 17.1642 18.45 16.75L14.2657 12.5657C13.9533 12.2533 13.9533 11.7467 14.2657 11.4343Z" fill="black" />
+									<path d="M8.2657 11.4343L12.45 7.25C12.8642 6.83579 12.8642 6.16421 12.45 5.75C12.0358 5.33579 11.3642 5.33579 10.95 5.75L5.40712 11.2929C5.01659 11.6834 5.01659 12.3166 5.40712 12.7071L10.95 18.25C11.3642 18.6642 12.0358 18.6642 12.45 18.25C12.8642 17.8358 12.8642 17.1642 12.45 16.75L8.2657 12.5657C7.95328 12.2533 7.95328 11.7467 8.2657 11.4343Z" fill="black" />
+								</svg>
+							</span>
+							<!--end::Svg Icon-->
+						</div>
+						<!--end::Aside toggler-->
+					</div>
+					<!--end::Brand-->
+					<!--begin::Aside menu-->
+					<div class="aside-menu flex-column-fluid">
+						<!--begin::Aside Menu-->
+						<div class="hover-scroll-overlay-y my-5 my-lg-5" id="kt_aside_menu_wrapper" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_aside_logo, #kt_aside_footer" data-kt-scroll-wrappers="#kt_aside_menu" data-kt-scroll-offset="0">
+							<!--begin::Menu-->
+							<div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500" id="#kt_aside_menu" data-kt-menu="true" data-kt-menu-expand="false">
+								
+									<div class="menu-item">
+										<a class="menu-link" href="/clerk/dash">
+											<span class="menu-icon">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+												<span class="svg-icon svg-icon-2">
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+														<rect x="2" y="2" width="9" height="9" rx="2" fill="black" />
+														<rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="black" />
+														<rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="black" />
+														<rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="black" />
+													</svg>
+												</span>
+												<!--end::Svg Icon-->
+											</span>
+											<span class="menu-title">Dashboard</span>
+										</a>
+									</div>
+						
+							
+					
+							<div class="menu-item">
+									<div class="menu-content pt-8 pb-2">
+										<span class="menu-section text-muted text-uppercase fs-8 ls-1">Income & Payments</span>
+									</div>
+								</div>
+								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+									<div class="menu-item">
+										<a class="menu-link" href="/clerk/receiptNumberUpdate">
+											<span class="menu-icon">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+												<span class="svg-icon svg-icon-2">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.3" d="M12.5 22C11.9 22 11.5 21.6 11.5 21V3C11.5 2.4 11.9 2 12.5 2C13.1 2 13.5 2.4 13.5 3V21C13.5 21.6 13.1 22 12.5 22Z" fill="black"/>
+<path d="M17.8 14.7C17.8 15.5 17.6 16.3 17.2 16.9C16.8 17.6 16.2 18.1 15.3 18.4C14.5 18.8 13.5 19 12.4 19C11.1 19 10 18.7 9.10001 18.2C8.50001 17.8 8.00001 17.4 7.60001 16.7C7.20001 16.1 7 15.5 7 14.9C7 14.6 7.09999 14.3 7.29999 14C7.49999 13.8 7.80001 13.6 8.20001 13.6C8.50001 13.6 8.69999 13.7 8.89999 13.9C9.09999 14.1 9.29999 14.4 9.39999 14.7C9.59999 15.1 9.8 15.5 10 15.8C10.2 16.1 10.5 16.3 10.8 16.5C11.2 16.7 11.6 16.8 12.2 16.8C13 16.8 13.7 16.6 14.2 16.2C14.7 15.8 15 15.3 15 14.8C15 14.4 14.9 14 14.6 13.7C14.3 13.4 14 13.2 13.5 13.1C13.1 13 12.5 12.8 11.8 12.6C10.8 12.4 9.99999 12.1 9.39999 11.8C8.69999 11.5 8.19999 11.1 7.79999 10.6C7.39999 10.1 7.20001 9.39998 7.20001 8.59998C7.20001 7.89998 7.39999 7.19998 7.79999 6.59998C8.19999 5.99998 8.80001 5.60005 9.60001 5.30005C10.4 5.00005 11.3 4.80005 12.3 4.80005C13.1 4.80005 13.8 4.89998 14.5 5.09998C15.1 5.29998 15.6 5.60002 16 5.90002C16.4 6.20002 16.7 6.6 16.9 7C17.1 7.4 17.2 7.69998 17.2 8.09998C17.2 8.39998 17.1 8.7 16.9 9C16.7 9.3 16.4 9.40002 16 9.40002C15.7 9.40002 15.4 9.29995 15.3 9.19995C15.2 9.09995 15 8.80002 14.8 8.40002C14.6 7.90002 14.3 7.49995 13.9 7.19995C13.5 6.89995 13 6.80005 12.2 6.80005C11.5 6.80005 10.9 7.00005 10.5 7.30005C10.1 7.60005 9.79999 8.00002 9.79999 8.40002C9.79999 8.70002 9.9 8.89998 10 9.09998C10.1 9.29998 10.4 9.49998 10.6 9.59998C10.8 9.69998 11.1 9.90002 11.4 9.90002C11.7 10 12.1 10.1 12.7 10.3C13.5 10.5 14.2 10.7 14.8 10.9C15.4 11.1 15.9 11.4 16.4 11.7C16.8 12 17.2 12.4 17.4 12.9C17.6 13.4 17.8 14 17.8 14.7Z" fill="black"/>
+</svg>
+
+												</span>
+												<!--end::Svg Icon-->
+											</span>
+											<span class="menu-title">Payments</span>
+										</a>
+									</div>
+
+
+
+
+
+
+
+										<div class="menu-item">
+										<a class="menu-link" href="/clerk/clients">
+											<span class="menu-icon">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+												<span class="svg-icon svg-icon-2">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.3" d="M19 22H5C4.4 22 4 21.6 4 21V3C4 2.4 4.4 2 5 2H14L20 8V21C20 21.6 19.6 22 19 22ZM12.5 18C12.5 17.4 12.6 17.5 12 17.5H8.5C7.9 17.5 8 17.4 8 18C8 18.6 7.9 18.5 8.5 18.5L12 18C12.6 18 12.5 18.6 12.5 18ZM16.5 13C16.5 12.4 16.6 12.5 16 12.5H8.5C7.9 12.5 8 12.4 8 13C8 13.6 7.9 13.5 8.5 13.5H15.5C16.1 13.5 16.5 13.6 16.5 13ZM12.5 8C12.5 7.4 12.6 7.5 12 7.5H8C7.4 7.5 7.5 7.4 7.5 8C7.5 8.6 7.4 8.5 8 8.5H12C12.6 8.5 12.5 8.6 12.5 8Z" fill="black"/>
+<rect x="7" y="17" width="6" height="2" rx="1" fill="black"/>
+<rect x="7" y="12" width="10" height="2" rx="1" fill="black"/>
+<rect x="7" y="7" width="6" height="2" rx="1" fill="black"/>
+<path d="M15 8H20L14 2V7C14 7.6 14.4 8 15 8Z" fill="black"/>
+</svg>
+
+
+											</span>
+												<!--end::Svg Icon-->
+											</span>
+											<span class="menu-title">Statements</span>
+										</a>
+									</div>
+
+			
+								
+								</div>
+							
+
+
+								
+							
+								
+
+
+
+
+
+
+
+							
+					
+							<div class="menu-item">
+									<div class="menu-content pt-8 pb-2">
+										<span class="menu-section text-muted text-uppercase fs-8 ls-1">Students</span>
+									</div>
+								</div>
+								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+									<div class="menu-item">
+										<a class="menu-link" href="/clerk/profileNew">
+											<span class="menu-icon">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+												<span class="svg-icon svg-icon-2">
+																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.0173 9H15.3945C14.2833 9 13.263 9.61425 12.7431 10.5963L12.154 11.7091C12.0645 11.8781 12.1072 12.0868 12.2559 12.2071L12.6402 12.5183C13.2631 13.0225 13.7556 13.6691 14.0764 14.4035L14.2321 14.7601C14.2957 14.9058 14.4396 15 14.5987 15H18.6747C19.7297 15 20.4057 13.8774 19.912 12.945L18.6686 10.5963C18.1487 9.61425 17.1285 9 16.0173 9Z" fill="black"/>
+<rect opacity="0.3" x="14" y="4" width="4" height="4" rx="2" fill="black"/>
+<path d="M4.65486 14.8559C5.40389 13.1224 7.11161 12 9 12C10.8884 12 12.5961 13.1224 13.3451 14.8559L14.793 18.2067C15.3636 19.5271 14.3955 21 12.9571 21H5.04292C3.60453 21 2.63644 19.5271 3.20698 18.2067L4.65486 14.8559Z" fill="black"/>
+<rect opacity="0.3" x="6" y="5" width="6" height="6" rx="3" fill="black"/>
+</svg>
+
+												</span>
+												<!--end::Svg Icon-->
+											</span>
+											<span class="menu-title">Clients</span>
+										</a>
+									</div>
+
+
+									<div class="menu-item">
+										<a class="menu-link" href="/clerk/addStudent">
+											<span class="menu-icon">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+												<span class="svg-icon svg-icon-2">
+																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.0173 9H15.3945C14.2833 9 13.263 9.61425 12.7431 10.5963L12.154 11.7091C12.0645 11.8781 12.1072 12.0868 12.2559 12.2071L12.6402 12.5183C13.2631 13.0225 13.7556 13.6691 14.0764 14.4035L14.2321 14.7601C14.2957 14.9058 14.4396 15 14.5987 15H18.6747C19.7297 15 20.4057 13.8774 19.912 12.945L18.6686 10.5963C18.1487 9.61425 17.1285 9 16.0173 9Z" fill="black"/>
+<rect opacity="0.3" x="14" y="4" width="4" height="4" rx="2" fill="black"/>
+<path d="M4.65486 14.8559C5.40389 13.1224 7.11161 12 9 12C10.8884 12 12.5961 13.1224 13.3451 14.8559L14.793 18.2067C15.3636 19.5271 14.3955 21 12.9571 21H5.04292C3.60453 21 2.63644 19.5271 3.20698 18.2067L4.65486 14.8559Z" fill="black"/>
+<rect opacity="0.3" x="6" y="5" width="6" height="6" rx="3" fill="black"/>
+</svg>
+
+												</span>
+												<!--end::Svg Icon-->
+											</span>
+											<span class="menu-title">Register New Student</span>
+										</a>
+									</div>
+
+
+			
+								
+								</div>
+							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									<div class="menu-item">
+									<div class="menu-content pt-8 pb-2">
+										<span class="menu-section text-muted text-uppercase fs-8 ls-1">Invoicing</span>
+									</div>
+								</div>
+								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+									<div class="menu-item">
+										<a class="menu-link" href="/clerk/invoiceBatch">
+											<span class="menu-icon">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+												<span class="svg-icon svg-icon-2">
+	<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.3" d="M3 6C2.4 6 2 5.6 2 5V3C2 2.4 2.4 2 3 2H5C5.6 2 6 2.4 6 3C6 3.6 5.6 4 5 4H4V5C4 5.6 3.6 6 3 6ZM22 5V3C22 2.4 21.6 2 21 2H19C18.4 2 18 2.4 18 3C18 3.6 18.4 4 19 4H20V5C20 5.6 20.4 6 21 6C21.6 6 22 5.6 22 5ZM6 21C6 20.4 5.6 20 5 20H4V19C4 18.4 3.6 18 3 18C2.4 18 2 18.4 2 19V21C2 21.6 2.4 22 3 22H5C5.6 22 6 21.6 6 21ZM22 21V19C22 18.4 21.6 18 21 18C20.4 18 20 18.4 20 19V20H19C18.4 20 18 20.4 18 21C18 21.6 18.4 22 19 22H21C21.6 22 22 21.6 22 21Z" fill="black"/>
+<path d="M3 16C2.4 16 2 15.6 2 15V9C2 8.4 2.4 8 3 8C3.6 8 4 8.4 4 9V15C4 15.6 3.6 16 3 16ZM13 15V9C13 8.4 12.6 8 12 8C11.4 8 11 8.4 11 9V15C11 15.6 11.4 16 12 16C12.6 16 13 15.6 13 15ZM17 15V9C17 8.4 16.6 8 16 8C15.4 8 15 8.4 15 9V15C15 15.6 15.4 16 16 16C16.6 16 17 15.6 17 15ZM9 15V9C9 8.4 8.6 8 8 8H7C6.4 8 6 8.4 6 9V15C6 15.6 6.4 16 7 16H8C8.6 16 9 15.6 9 15ZM22 15V9C22 8.4 21.6 8 21 8H20C19.4 8 19 8.4 19 9V15C19 15.6 19.4 16 20 16H21C21.6 16 22 15.6 22 15Z" fill="black"/>
+</svg>
+
+
+												</span>
+												<!--end::Svg Icon-->
+											</span>
+											<span class="menu-title">Batch Invoicing</span>
+										</a>
+									</div>
+
+	<div class="menu-item">
+										<a class="menu-link" href="/clerk/invoiceSingleCode">
+											<span class="menu-icon">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+												<span class="svg-icon svg-icon-2">
+														<span class="svg-icon svg-icon-2">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.3" d="M20 18H4C3.4 18 3 17.6 3 17V7C3 6.4 3.4 6 4 6H20C20.6 6 21 6.4 21 7V17C21 17.6 20.6 18 20 18ZM12 8C10.3 8 9 9.8 9 12C9 14.2 10.3 16 12 16C13.7 16 15 14.2 15 12C15 9.8 13.7 8 12 8Z" fill="black"/>
+<path d="M18 6H20C20.6 6 21 6.4 21 7V9C19.3 9 18 7.7 18 6ZM6 6H4C3.4 6 3 6.4 3 7V9C4.7 9 6 7.7 6 6ZM21 17V15C19.3 15 18 16.3 18 18H20C20.6 18 21 17.6 21 17ZM3 15V17C3 17.6 3.4 18 4 18H6C6 16.3 4.7 15 3 15Z" fill="black"/>
+</svg>
+
+											</span>
+												</span>
+												<!--end::Svg Icon-->
+											</span>
+											<span class="menu-title">Student Invoicing</span>
+										</a>
+									</div>
+
+
+
+
+    	<div class="menu-item">
+										<a class="menu-link" href="/clerk/invoiceList">
+											<span class="menu-icon">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+												<span class="svg-icon svg-icon-2">
+														<span class="svg-icon svg-icon-2">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.3" d="M19 22H5C4.4 22 4 21.6 4 21V3C4 2.4 4.4 2 5 2H14L20 8V21C20 21.6 19.6 22 19 22ZM12.5 18C12.5 17.4 12.6 17.5 12 17.5H8.5C7.9 17.5 8 17.4 8 18C8 18.6 7.9 18.5 8.5 18.5L12 18C12.6 18 12.5 18.6 12.5 18ZM16.5 13C16.5 12.4 16.6 12.5 16 12.5H8.5C7.9 12.5 8 12.4 8 13C8 13.6 7.9 13.5 8.5 13.5H15.5C16.1 13.5 16.5 13.6 16.5 13ZM12.5 8C12.5 7.4 12.6 7.5 12 7.5H8C7.4 7.5 7.5 7.4 7.5 8C7.5 8.6 7.4 8.5 8 8.5H12C12.6 8.5 12.5 8.6 12.5 8Z" fill="black"/>
+<rect x="7" y="17" width="6" height="2" rx="1" fill="black"/>
+<rect x="7" y="12" width="10" height="2" rx="1" fill="black"/>
+<rect x="7" y="7" width="6" height="2" rx="1" fill="black"/>
+<path d="M15 8H20L14 2V7C14 7.6 14.4 8 15 8Z" fill="black"/>
+</svg>
+
+
+											</span>
+												</span>
+												<!--end::Svg Icon-->
+											</span>
+											<span class="menu-title">View Invoices</span>
+										</a>
+									</div>
+
+
+
+									
+								
+								</div>
+							
+
+
+			
+									<div class="menu-item">
+									<div class="menu-content pt-8 pb-2">
+										<span class="menu-section text-muted text-uppercase fs-8 ls-1">Expenses</span>
+									</div>
+								</div>
+								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+									<div class="menu-item">
+										<a class="menu-link" href="/clerk/exp">
+											<span class="menu-icon">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+													<span class="svg-icon svg-icon-2">
+			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.3" d="M6 19.7C5.7 19.7 5.5 19.6 5.3 19.4C4.9 19 4.9 18.4 5.3 18L18 5.3C18.4 4.9 19 4.9 19.4 5.3C19.8 5.7 19.8 6.29999 19.4 6.69999L6.7 19.4C6.5 19.6 6.3 19.7 6 19.7Z" fill="black"/>
+<path d="M18.8 19.7C18.5 19.7 18.3 19.6 18.1 19.4L5.40001 6.69999C5.00001 6.29999 5.00001 5.7 5.40001 5.3C5.80001 4.9 6.40001 4.9 6.80001 5.3L19.5 18C19.9 18.4 19.9 19 19.5 19.4C19.3 19.6 19 19.7 18.8 19.7Z" fill="black"/>
+</svg>
+
+
+											</span>
+												<!--end::Svg Icon-->
+											</span>
+											<span class="menu-title">Capture Expenses</span>
+										</a>
+									</div>
+
+	
+
+
+
+    	<div class="menu-item">
+										<a class="menu-link" href="/clerk/expList">
+											<span class="menu-icon">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+												<span class="svg-icon svg-icon-2">
+														<span class="svg-icon svg-icon-2">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.3" d="M19 22H5C4.4 22 4 21.6 4 21V3C4 2.4 4.4 2 5 2H14L20 8V21C20 21.6 19.6 22 19 22ZM12.5 18C12.5 17.4 12.6 17.5 12 17.5H8.5C7.9 17.5 8 17.4 8 18C8 18.6 7.9 18.5 8.5 18.5L12 18C12.6 18 12.5 18.6 12.5 18ZM16.5 13C16.5 12.4 16.6 12.5 16 12.5H8.5C7.9 12.5 8 12.4 8 13C8 13.6 7.9 13.5 8.5 13.5H15.5C16.1 13.5 16.5 13.6 16.5 13ZM12.5 8C12.5 7.4 12.6 7.5 12 7.5H8C7.4 7.5 7.5 7.4 7.5 8C7.5 8.6 7.4 8.5 8 8.5H12C12.6 8.5 12.5 8.6 12.5 8Z" fill="black"/>
+<rect x="7" y="17" width="6" height="2" rx="1" fill="black"/>
+<rect x="7" y="12" width="10" height="2" rx="1" fill="black"/>
+<rect x="7" y="7" width="6" height="2" rx="1" fill="black"/>
+<path d="M15 8H20L14 2V7C14 7.6 14.4 8 15 8Z" fill="black"/>
+</svg>
+
+
+											</span>
+												</span>
+												<!--end::Svg Icon-->
+											</span>
+											<span class="menu-title">View Expenses</span>
+										</a>
+									</div>
+
+
+
+									
+								
+								</div>
+							
+
+
+			
+
+
+
+
+
+
+
+
+	<div class="menu-item">
+									<div class="menu-content pt-8 pb-2">
+										<span class="menu-section text-muted text-uppercase fs-8 ls-1">Repositories</span>
+									</div>
+								</div>
+								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+								
+
+<div class="menu-item">
+										<a class="menu-link" href="/clerk/folderTermInvoiceReg">
+											<span class="menu-icon">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+												<span class="svg-icon svg-icon-2">
+													<span class="svg-icon svg-icon-2">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.3" d="M10 4H21C21.6 4 22 4.4 22 5V7H10V4Z" fill="black"/>
+<path d="M9.2 3H3C2.4 3 2 3.4 2 4V19C2 19.6 2.4 20 3 20H21C21.6 20 22 19.6 22 19V7C22 6.4 21.6 6 21 6H12L10.4 3.60001C10.2 3.20001 9.7 3 9.2 3Z" fill="black"/>
+</svg>
+
+											</span>
+												</span>
+												<!--end::Svg Icon-->
+											</span>
+											<span class="menu-title">Batch Invoices Repo</span>
+										</a>
+									</div>	
+
+
+
+
+<div class="menu-item">
+										<a class="menu-link" href="/clerk/folderMonthlyInvoiceReg">
+											<span class="menu-icon">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+												<span class="svg-icon svg-icon-2">
+													<span class="svg-icon svg-icon-2">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.3" d="M10 4H21C21.6 4 22 4.4 22 5V7H10V4Z" fill="black"/>
+<path d="M9.2 3H3C2.4 3 2 3.4 2 4V19C2 19.6 2.4 20 3 20H21C21.6 20 22 19.6 22 19V7C22 6.4 21.6 6 21 6H12L10.4 3.60001C10.2 3.20001 9.7 3 9.2 3Z" fill="black"/>
+</svg>
+
+											</span>
+												</span>
+												<!--end::Svg Icon-->
+											</span>
+											<span class="menu-title">Monthly Invoices Repo</span>
+										</a>
+									</div>	
+
+
+
+
+
+            <div class="menu-item">
+										<a class="menu-link" href="/clerk/folderMonthlyReceiptReg">
+											<span class="menu-icon">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+												<span class="svg-icon svg-icon-2">
+													<span class="svg-icon svg-icon-2">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.3" d="M10 4H21C21.6 4 22 4.4 22 5V7H10V4Z" fill="black"/>
+<path d="M9.2 3H3C2.4 3 2 3.4 2 4V19C2 19.6 2.4 20 3 20H21C21.6 20 22 19.6 22 19V7C22 6.4 21.6 6 21 6H12L10.4 3.60001C10.2 3.20001 9.7 3 9.2 3Z" fill="black"/>
+</svg>
+
+											</span>
+												</span>
+												<!--end::Svg Icon-->
+											</span>
+											<span class="menu-title">Receipts Repo</span>
+										</a>
+									</div>	
+
+
+
+
+  <div class="menu-item">
+										<a class="menu-link" href="/clerk/folderMonthlyExpReg">
+											<span class="menu-icon">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+												<span class="svg-icon svg-icon-2">
+													<span class="svg-icon svg-icon-2">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.3" d="M10 4H21C21.6 4 22 4.4 22 5V7H10V4Z" fill="black"/>
+<path d="M9.2 3H3C2.4 3 2 3.4 2 4V19C2 19.6 2.4 20 3 20H21C21.6 20 22 19.6 22 19V7C22 6.4 21.6 6 21 6H12L10.4 3.60001C10.2 3.20001 9.7 3 9.2 3Z" fill="black"/>
+</svg>
+
+											</span>
+												</span>
+												<!--end::Svg Icon-->
+											</span>
+											<span class="menu-title">Expenses Repo</span>
+										</a>
+									</div>	
+
+
+
+
+
+
+							</div>
+
+
+
+
+
+
+
+
+
+
+
+											
+	<div class="menu-item">
+									<div class="menu-content pt-8 pb-2">
+										<span class="menu-section text-muted text-uppercase fs-8 ls-1">Students</span>
+									</div>
+								</div>
+								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+								
+
+
+
+
+
+
+<div class="menu-item">
+										<a class="menu-link" href="/clerk/creditors">
+											<span class="menu-icon">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+												<span class="svg-icon svg-icon-2">
+													<span class="svg-icon svg-icon-2">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.0173 9H15.3945C14.2833 9 13.263 9.61425 12.7431 10.5963L12.154 11.7091C12.0645 11.8781 12.1072 12.0868 12.2559 12.2071L12.6402 12.5183C13.2631 13.0225 13.7556 13.6691 14.0764 14.4035L14.2321 14.7601C14.2957 14.9058 14.4396 15 14.5987 15H18.6747C19.7297 15 20.4057 13.8774 19.912 12.945L18.6686 10.5963C18.1487 9.61425 17.1285 9 16.0173 9Z" fill="black"/>
+<rect opacity="0.3" x="14" y="4" width="4" height="4" rx="2" fill="black"/>
+<path d="M4.65486 14.8559C5.40389 13.1224 7.11161 12 9 12C10.8884 12 12.5961 13.1224 13.3451 14.8559L14.793 18.2067C15.3636 19.5271 14.3955 21 12.9571 21H5.04292C3.60453 21 2.63644 19.5271 3.20698 18.2067L4.65486 14.8559Z" fill="black"/>
+<rect opacity="0.3" x="6" y="5" width="6" height="6" rx="3" fill="black"/>
+</svg>
+
+											</span>
+												</span>
+												<!--end::Svg Icon-->
+											</span>
+											<span class="menu-title">Creditors</span>
+										</a>
+									</div>	
+
+
+
+
+
+            <div class="menu-item">
+										<a class="menu-link" href="/clerk/debtors">
+											<span class="menu-icon">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+												<span class="svg-icon svg-icon-2">
+													<span class="svg-icon svg-icon-2">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.0173 9H15.3945C14.2833 9 13.263 9.61425 12.7431 10.5963L12.154 11.7091C12.0645 11.8781 12.1072 12.0868 12.2559 12.2071L12.6402 12.5183C13.2631 13.0225 13.7556 13.6691 14.0764 14.4035L14.2321 14.7601C14.2957 14.9058 14.4396 15 14.5987 15H18.6747C19.7297 15 20.4057 13.8774 19.912 12.945L18.6686 10.5963C18.1487 9.61425 17.1285 9 16.0173 9Z" fill="black"/>
+<rect opacity="0.3" x="14" y="4" width="4" height="4" rx="2" fill="black"/>
+<path d="M4.65486 14.8559C5.40389 13.1224 7.11161 12 9 12C10.8884 12 12.5961 13.1224 13.3451 14.8559L14.793 18.2067C15.3636 19.5271 14.3955 21 12.9571 21H5.04292C3.60453 21 2.63644 19.5271 3.20698 18.2067L4.65486 14.8559Z" fill="black"/>
+<rect opacity="0.3" x="6" y="5" width="6" height="6" rx="3" fill="black"/>
+</svg>
+
+											</span>
+												</span>
+												<!--end::Svg Icon-->
+											</span>
+											<span class="menu-title">Debtors</span>
+										</a>
+									</div>	
+
+							</div>
+
+
+
+										
+
+
+
+								
+								
+	<div class="menu-item">
+									<div class="menu-content pt-8 pb-2">
+										<span class="menu-section text-muted text-uppercase fs-8 ls-1">Stock Mgmt</span>
+									</div>
+								</div>
+								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+									<div class="menu-item">
+										<a class="menu-link" href="/clerk/stockBatch">
+											<span class="menu-icon">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+													<span class="svg-icon svg-icon-2">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.3" d="M3 6C2.4 6 2 5.6 2 5V3C2 2.4 2.4 2 3 2H5C5.6 2 6 2.4 6 3C6 3.6 5.6 4 5 4H4V5C4 5.6 3.6 6 3 6ZM22 5V3C22 2.4 21.6 2 21 2H19C18.4 2 18 2.4 18 3C18 3.6 18.4 4 19 4H20V5C20 5.6 20.4 6 21 6C21.6 6 22 5.6 22 5ZM6 21C6 20.4 5.6 20 5 20H4V19C4 18.4 3.6 18 3 18C2.4 18 2 18.4 2 19V21C2 21.6 2.4 22 3 22H5C5.6 22 6 21.6 6 21ZM22 21V19C22 18.4 21.6 18 21 18C20.4 18 20 18.4 20 19V20H19C18.4 20 18 20.4 18 21C18 21.6 18.4 22 19 22H21C21.6 22 22 21.6 22 21Z" fill="black"/>
+<path d="M3 16C2.4 16 2 15.6 2 15V9C2 8.4 2.4 8 3 8C3.6 8 4 8.4 4 9V15C4 15.6 3.6 16 3 16ZM13 15V9C13 8.4 12.6 8 12 8C11.4 8 11 8.4 11 9V15C11 15.6 11.4 16 12 16C12.6 16 13 15.6 13 15ZM17 15V9C17 8.4 16.6 8 16 8C15.4 8 15 8.4 15 9V15C15 15.6 15.4 16 16 16C16.6 16 17 15.6 17 15ZM9 15V9C9 8.4 8.6 8 8 8H7C6.4 8 6 8.4 6 9V15C6 15.6 6.4 16 7 16H8C8.6 16 9 15.6 9 15ZM22 15V9C22 8.4 21.6 8 21 8H20C19.4 8 19 8.4 19 9V15C19 15.6 19.4 16 20 16H21C21.6 16 22 15.6 22 15Z" fill="black"/>
+</svg>
+
+
+											</span>
+
+												<!--end::Svg Icon-->
+											</span>
+											<span class="menu-title">Receive Stock</span>
+										</a>
+									</div>
+								
+								</div>
+						
+
+
+		<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+									<div class="menu-item">
+										<a class="menu-link" href="/viewStockRcvd">
+											<span class="menu-icon">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+											
+													<span class="svg-icon svg-icon-2">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20 8H16C15.4 8 15 8.4 15 9V16H10V17C10 17.6 10.4 18 11 18H16C16 16.9 16.9 16 18 16C19.1 16 20 16.9 20 18H21C21.6 18 22 17.6 22 17V13L20 8Z" fill="black"/>
+<path opacity="0.3" d="M20 18C20 19.1 19.1 20 18 20C16.9 20 16 19.1 16 18C16 16.9 16.9 16 18 16C19.1 16 20 16.9 20 18ZM15 4C15 3.4 14.6 3 14 3H3C2.4 3 2 3.4 2 4V13C2 13.6 2.4 14 3 14H15V4ZM6 16C4.9 16 4 16.9 4 18C4 19.1 4.9 20 6 20C7.1 20 8 19.1 8 18C8 16.9 7.1 16 6 16Z" fill="black"/>
+</svg>
+
+
+												</span>
+												<!--end::Svg Icon-->
+											</span>
+											<span class="menu-title">Stock Received</span>
+										</a>
+									</div>
+								
+								</div>
+
+					
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+										
+					
+
+<div class="menu-item">
+									<div class="menu-content pt-8 pb-2">
+										<span class="menu-section text-muted text-uppercase fs-8 ls-1">Products & Services</span>
+									</div>
+								</div>
+								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+									<div class="menu-item">
+										<a class="menu-link" href="/clerk/viewProducts">
+											<span class="menu-icon">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+												<span class="svg-icon svg-icon-2">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.5" d="M11.4343 14.3657L7.25 18.55C6.83579 18.9643 6.16421 18.9643 5.75 18.55C5.33579 18.1358 5.33579 17.4643 5.75 17.05L11.2929 11.5072C11.6834 11.1166 12.3166 11.1166 12.7071 11.5072L18.25 17.05C18.6642 17.4643 18.6642 18.1358 18.25 18.55C17.8358 18.9643 17.1642 18.9643 16.75 18.55L12.5657 14.3657C12.2533 14.0533 11.7467 14.0533 11.4343 14.3657Z" fill="black"/>
+<path d="M11.4343 8.36573L7.25 12.55C6.83579 12.9643 6.16421 12.9643 5.75 12.55C5.33579 12.1358 5.33579 11.4643 5.75 11.05L11.2929 5.50716C11.6834 5.11663 12.3166 5.11663 12.7071 5.50715L18.25 11.05C18.6642 11.4643 18.6642 12.1358 18.25 12.55C17.8358 12.9643 17.1642 12.9643 16.75 12.55L12.5657 8.36573C12.2533 8.05331 11.7467 8.05332 11.4343 8.36573Z" fill="black"/>
+</svg>
+	
+												</span>
+												<!--end::Svg Icon-->
+											</span>
+											<span class="menu-title">Products</span>
+										</a>
+									</div>
+
+					</div>
+								
+
+								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+														<div class="menu-item">
+															<a class="menu-link" href="/clerk/viewServices">
+																<span class="menu-icon">
+																	<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+																	<span class="svg-icon svg-icon-2">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.5" d="M12.5657 9.63427L16.75 5.44995C17.1642 5.03574 17.8358 5.03574 18.25 5.44995C18.6642 5.86416 18.6642 6.53574 18.25 6.94995L12.7071 12.4928C12.3166 12.8834 11.6834 12.8834 11.2929 12.4928L5.75 6.94995C5.33579 6.53574 5.33579 5.86416 5.75 5.44995C6.16421 5.03574 6.83579 5.03574 7.25 5.44995L11.4343 9.63427C11.7467 9.94669 12.2533 9.94668 12.5657 9.63427Z" fill="black"/>
+<path d="M12.5657 15.6343L16.75 11.45C17.1642 11.0357 17.8358 11.0357 18.25 11.45C18.6642 11.8642 18.6642 12.5357 18.25 12.95L12.7071 18.4928C12.3166 18.8834 11.6834 18.8834 11.2929 18.4928L5.75 12.95C5.33579 12.5357 5.33579 11.8642 5.75 11.45C6.16421 11.0357 6.83579 11.0357 7.25 11.45L11.4343 15.6343C11.7467 15.9467 12.2533 15.9467 12.5657 15.6343Z" fill="black"/>
+</svg>
+																	</span>
+																	<!--end::Svg Icon-->
+																</span>
+																<span class="menu-title">Services</span>
+															</a>
+														</div>
+													</div>
+
+
+	<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+															<div class="menu-item">
+										<a class="menu-link" href="/info">
+											<span class="menu-icon">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+													<span class="svg-icon svg-icon-2">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.3" d="M19 22H5C4.4 22 4 21.6 4 21V3C4 2.4 4.4 2 5 2H14L20 8V21C20 21.6 19.6 22 19 22ZM16 13.5L12.5 13V10C12.5 9.4 12.6 9.5 12 9.5C11.4 9.5 11.5 9.4 11.5 10L11 13L8 13.5C7.4 13.5 7 13.4 7 14C7 14.6 7.4 14.5 8 14.5H11V18C11 18.6 11.4 19 12 19C12.6 19 12.5 18.6 12.5 18V14.5L16 14C16.6 14 17 14.6 17 14C17 13.4 16.6 13.5 16 13.5Z" fill="black"/>
+<rect x="11" y="19" width="10" height="2" rx="1" transform="rotate(-90 11 19)" fill="black"/>
+<rect x="7" y="13" width="10" height="2" rx="1" fill="black"/>
+<path d="M15 8H20L14 2V7C14 7.6 14.4 8 15 8Z" fill="black"/>
+</svg>
+
+											</span>
+
+												<!--end::Svg Icon-->
+											</span>
+											<span class="menu-title">Codes</span>
+										</a>
+									</div>
+													</div>
+
+
+
+
+	<div class="menu-item">
+									<div class="menu-content pt-8 pb-2">
+										<span class="menu-section text-muted text-uppercase fs-8 ls-1">Perfomance Analytics</span>
+									</div>
+								</div>
+								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+									<div class="menu-item">
+										<a class="menu-link" href="/clerk/analytics">
+											<span class="menu-icon">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+													<span class="svg-icon svg-icon-2">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.3" d="M14 3V21H10V3C10 2.4 10.4 2 11 2H13C13.6 2 14 2.4 14 3ZM7 14H5C4.4 14 4 14.4 4 15V21H8V15C8 14.4 7.6 14 7 14Z" fill="black"/>
+<path d="M21 20H20V8C20 7.4 19.6 7 19 7H17C16.4 7 16 7.4 16 8V20H3C2.4 20 2 20.4 2 21C2 21.6 2.4 22 3 22H21C21.6 22 22 21.6 22 21C22 20.4 21.6 20 21 20Z" fill="black"/>
+</svg>
+
+											</span>
+
+												<!--end::Svg Icon-->
+											</span>
+											<span class="menu-title">Class Analytics</span>
+										</a>
+									</div>
+								
+
+
+
+
+								<div class="menu-item">
+										<a class="menu-link" href="/clerk/appraisal">
+											<span class="menu-icon">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+													<span class="svg-icon svg-icon-2">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13 5.91517C15.8 6.41517 18 8.81519 18 11.8152C18 12.5152 17.9 13.2152 17.6 13.9152L20.1 15.3152C20.6 15.6152 21.4 15.4152 21.6 14.8152C21.9 13.9152 22.1 12.9152 22.1 11.8152C22.1 7.01519 18.8 3.11521 14.3 2.01521C13.7 1.91521 13.1 2.31521 13.1 3.01521V5.91517H13Z" fill="black"/>
+<path opacity="0.3" d="M19.1 17.0152C19.7 17.3152 19.8 18.1152 19.3 18.5152C17.5 20.5152 14.9 21.7152 12 21.7152C9.1 21.7152 6.50001 20.5152 4.70001 18.5152C4.30001 18.0152 4.39999 17.3152 4.89999 17.0152L7.39999 15.6152C8.49999 16.9152 10.2 17.8152 12 17.8152C13.8 17.8152 15.5 17.0152 16.6 15.6152L19.1 17.0152ZM6.39999 13.9151C6.19999 13.2151 6 12.5152 6 11.8152C6 8.81517 8.2 6.41515 11 5.91515V3.01519C11 2.41519 10.4 1.91519 9.79999 2.01519C5.29999 3.01519 2 7.01517 2 11.8152C2 12.8152 2.2 13.8152 2.5 14.8152C2.7 15.4152 3.4 15.7152 4 15.3152L6.39999 13.9151Z" fill="black"/>
+</svg>
+
+											</span>
+
+												<!--end::Svg Icon-->
+											</span>
+											<span class="menu-title">Teachers Appraisal</span>
+										</a>
+									</div>
+
+
+
+								</div>
+						
+
+
+	
+			
+
+	<div class="menu-item">
+									<div class="menu-content pt-8 pb-2">
+										<span class="menu-section text-muted text-uppercase fs-8 ls-1">Marks Assessments</span>
+									</div>
+								</div>
+									
+								
+								
+								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+									<div class="menu-item">
+										<a class="menu-link" href="/clerk/teachersFiles">
+											<span class="menu-icon">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+												<span class="svg-icon svg-icon-2">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.3" d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z" fill="black"/>
+<path d="M20 8L14 2V6C14 7.10457 14.8954 8 16 8H20Z" fill="black"/>
+<path d="M10.3629 14.0084L8.92108 12.6429C8.57518 12.3153 8.03352 12.3153 7.68761 12.6429C7.31405 12.9967 7.31405 13.5915 7.68761 13.9453L10.2254 16.3488C10.6111 16.714 11.215 16.714 11.6007 16.3488L16.3124 11.8865C16.6859 11.5327 16.6859 10.9379 16.3124 10.5841C15.9665 10.2565 15.4248 10.2565 15.0789 10.5841L11.4631 14.0084C11.1546 14.3006 10.6715 14.3006 10.3629 14.0084Z" fill="black"/>
+</svg>
+
+												</span>
+												<!--end::Svg Icon-->
+											</span>
+											<span class="menu-title">Teachers</span>
+										</a>
+									</div>
+								</div>
+
+
+	
+								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+									<div class="menu-item">
+										<a class="menu-link" href="/clerk/classFiles">
+											<span class="menu-icon">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+												<span class="svg-icon svg-icon-2">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.3" d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z" fill="black"/>
+<path d="M20 8L14 2V6C14 7.10457 14.8954 8 16 8H20Z" fill="black"/>
+<path d="M10.3629 14.0084L8.92108 12.6429C8.57518 12.3153 8.03352 12.3153 7.68761 12.6429C7.31405 12.9967 7.31405 13.5915 7.68761 13.9453L10.2254 16.3488C10.6111 16.714 11.215 16.714 11.6007 16.3488L16.3124 11.8865C16.6859 11.5327 16.6859 10.9379 16.3124 10.5841C15.9665 10.2565 15.4248 10.2565 15.0789 10.5841L11.4631 14.0084C11.1546 14.3006 10.6715 14.3006 10.3629 14.0084Z" fill="black"/>
+</svg>
+
+												</span>
+												<!--end::Svg Icon-->
+											</span>
+											<span class="menu-title">Classes</span>
+										</a>
+									</div>
+								</div>
+
+
+					
+
+
+						
+	<div class="menu-item">
+									<div class="menu-content pt-8 pb-2">
+										<span class="menu-section text-muted text-uppercase fs-8 ls-1">Communication</span>
+									</div>
+								</div>
+									
+								
+								
+								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+									<div class="menu-item">
+										<a class="menu-link" href="/clerk/msgX">
+											<span class="menu-icon">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+												<span class="svg-icon svg-icon-2">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.3" d="M21 18H3C2.4 18 2 17.6 2 17V7C2 6.4 2.4 6 3 6H21C21.6 6 22 6.4 22 7V17C22 17.6 21.6 18 21 18Z" fill="black"/>
+<path d="M11.4 13.5C11.8 13.8 12.3 13.8 12.6 13.5L21.6 6.30005C21.4 6.10005 21.2 6 20.9 6H2.99998C2.69998 6 2.49999 6.10005 2.29999 6.30005L11.4 13.5Z" fill="black"/>
+</svg>
+
+												</span>
+												<!--end::Svg Icon-->
+											</span>
+											<span class="menu-title">Messages</span>
+										</a>
+									</div>
+								</div>
+
+	<div class="menu-item">
+									<div class="menu-content pt-8 pb-2">
+										<span class="menu-section text-muted text-uppercase fs-8 ls-1">Students & Staff</span>
+									</div>
+								</div>
+									<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+									<span class="menu-link">
+										<span class="menu-icon">
+											<!--begin::Svg Icon | path: icons/duotune/communication/com013.svg-->
+											<span class="svg-icon svg-icon-2">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.0173 9H15.3945C14.2833 9 13.263 9.61425 12.7431 10.5963L12.154 11.7091C12.0645 11.8781 12.1072 12.0868 12.2559 12.2071L12.6402 12.5183C13.2631 13.0225 13.7556 13.6691 14.0764 14.4035L14.2321 14.7601C14.2957 14.9058 14.4396 15 14.5987 15H18.6747C19.7297 15 20.4057 13.8774 19.912 12.945L18.6686 10.5963C18.1487 9.61425 17.1285 9 16.0173 9Z" fill="black"/>
+<rect opacity="0.3" x="14" y="4" width="4" height="4" rx="2" fill="black"/>
+<path d="M4.65486 14.8559C5.40389 13.1224 7.11161 12 9 12C10.8884 12 12.5961 13.1224 13.3451 14.8559L14.793 18.2067C15.3636 19.5271 14.3955 21 12.9571 21H5.04292C3.60453 21 2.63644 19.5271 3.20698 18.2067L4.65486 14.8559Z" fill="black"/>
+<rect opacity="0.3" x="6" y="5" width="6" height="6" rx="3" fill="black"/>
+</svg>
+
+											</span>
+											<!--end::Svg Icon-->
+										</span>
+										<span class="menu-title">Students</span>
+										<span class="menu-arrow"></span>
+									</span>
+									<div class="menu-sub menu-sub-accordion menu-active-bg">
+										<div class="menu-item">
+											<a class="menu-link" href="/clerk/addStudent">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+												<span class="menu-title">Register New Students</span>
+											</a>
+										</div>
+										<div class="menu-item">
+											<a class="menu-link" href="/clerk/addClass">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+												<span class="menu-title">Add Student Classes</span>
+											</a>
+										</div>
+
+											<div class="menu-item">
+											<a class="menu-link" href="/clerk/classList">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+												<span class="menu-title">View Classes</span>
+											</a>
+										</div>
+										<div class="menu-item">
+											<a class="menu-link" href="/clerk/studentList">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+												<span class="menu-title">View Students</span>
+											</a>
+										</div>
+										<div class="menu-item">
+											<a class="menu-link" href="/clerk/import">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+												<span class="menu-title">Import New Students</span>
+											</a>
+										</div>
+										
+
+											<div class="menu-item">
+											<a class="menu-link" href="/clerk/addLevel">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+												<span class="menu-title">Add Level - Grades </span>
+											</a>
+										</div>
+
+											<div class="menu-item">
+											<a class="menu-link" href="/clerk/viewLevels">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+												<span class="menu-title">View Level - Grades</span>
+											</a>
+										</div>
+									</div>
+								</div>
+								
+								
+								
+							<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+									<span class="menu-link">
+										<span class="menu-icon">
+											<!--begin::Svg Icon | path: icons/duotune/communication/com013.svg-->
+											<span class="svg-icon svg-icon-2">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.0173 9H15.3945C14.2833 9 13.263 9.61425 12.7431 10.5963L12.154 11.7091C12.0645 11.8781 12.1072 12.0868 12.2559 12.2071L12.6402 12.5183C13.2631 13.0225 13.7556 13.6691 14.0764 14.4035L14.2321 14.7601C14.2957 14.9058 14.4396 15 14.5987 15H18.6747C19.7297 15 20.4057 13.8774 19.912 12.945L18.6686 10.5963C18.1487 9.61425 17.1285 9 16.0173 9Z" fill="black"/>
+<rect opacity="0.3" x="14" y="4" width="4" height="4" rx="2" fill="black"/>
+<path d="M4.65486 14.8559C5.40389 13.1224 7.11161 12 9 12C10.8884 12 12.5961 13.1224 13.3451 14.8559L14.793 18.2067C15.3636 19.5271 14.3955 21 12.9571 21H5.04292C3.60453 21 2.63644 19.5271 3.20698 18.2067L4.65486 14.8559Z" fill="black"/>
+<rect opacity="0.3" x="6" y="5" width="6" height="6" rx="3" fill="black"/>
+</svg>
+
+											</span>
+											<!--end::Svg Icon-->
+										</span>
+										<span class="menu-title">Teachers</span>
+										<span class="menu-arrow"></span>
+									</span>
+									<div class="menu-sub menu-sub-accordion menu-active-bg">
+										<div class="menu-item">
+											<a class="menu-link" href="/clerk/addTeacher">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+												<span class="menu-title">Add Teachers</span>
+											</a>
+										</div>
+										<div class="menu-item">
+											<a class="menu-link" href="/clerk/importTeacher">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+												<span class="menu-title">Import Teachers</span>
+											</a>
+										</div>
+
+									<div class="menu-item">
+											<a class="menu-link" href="/clerk/teacherList">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+												<span class="menu-title">View Teachers</span>
+											</a>
+										</div>	
+										
+										
+									</div>
+								</div>
+								
+			
+
+			
+	<div class="menu-item">
+									<div class="menu-content pt-8 pb-2">
+										<span class="menu-section text-muted text-uppercase fs-8 ls-1">Students Reports</span>
+									</div>
+								</div>
+								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+									<div class="menu-item">
+										<a class="menu-link" href="/clerk/files">
+											<span class="menu-icon">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+												<span class="svg-icon svg-icon-2">
+													<span class="svg-icon svg-icon-2">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.3" d="M19 22H5C4.4 22 4 21.6 4 21V3C4 2.4 4.4 2 5 2H14V4H6V20H18V8H20V21C20 21.6 19.6 22 19 22Z" fill="black"/>
+<path d="M15 8H20L14 2V7C14 7.6 14.4 8 15 8Z" fill="black"/>
+</svg>
+
+
+											</span>
+												</span>
+												<!--end::Svg Icon-->
+											</span>
+											<span class="menu-title">Monthly Reports</span>
+										</a>
+									</div>
+
+
+<div class="menu-item">
+										<a class="menu-link" href="/clerk/examFiles">
+											<span class="menu-icon">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+												<span class="svg-icon svg-icon-2">
+														<span class="svg-icon svg-icon-2">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.3" d="M19 22H5C4.4 22 4 21.6 4 21V3C4 2.4 4.4 2 5 2H14L20 8V21C20 21.6 19.6 22 19 22Z" fill="black"/>
+<path d="M15 8H20L14 2V7C14 7.6 14.4 8 15 8Z" fill="black"/>
+</svg>
+
+
+
+
+											</span>
+												</span>
+												<!--end::Svg Icon-->
+											</span>
+											<span class="menu-title">End Of Term Reports</span>
+										</a>
+									</div>
+
+								
+								</div>
+
+
+	<div class="menu-item">
+									<div class="menu-content pt-8 pb-2">
+										<span class="menu-section text-muted text-uppercase fs-8 ls-1">Teachers Reports</span>
+									</div>
+								</div>
+								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+									<div class="menu-item">
+										<a class="menu-link" href="/clerk/teachersRepo">
+											<span class="menu-icon">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+												<span class="svg-icon svg-icon-2">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.3" d="M10 4H21C21.6 4 22 4.4 22 5V7H10V4Z" fill="black"/>
+<path opacity="0.3" d="M10.3 15.3L11 14.6L8.70002 12.3C8.30002 11.9 7.7 11.9 7.3 12.3C6.9 12.7 6.9 13.3 7.3 13.7L10.3 16.7C9.9 16.3 9.9 15.7 10.3 15.3Z" fill="black"/>
+<path d="M10.4 3.60001L12 6H21C21.6 6 22 6.4 22 7V19C22 19.6 21.6 20 21 20H3C2.4 20 2 19.6 2 19V4C2 3.4 2.4 3 3 3H9.20001C9.70001 3 10.2 3.20001 10.4 3.60001ZM11.7 16.7L16.7 11.7C17.1 11.3 17.1 10.7 16.7 10.3C16.3 9.89999 15.7 9.89999 15.3 10.3L11 14.6L8.70001 12.3C8.30001 11.9 7.69999 11.9 7.29999 12.3C6.89999 12.7 6.89999 13.3 7.29999 13.7L10.3 16.7C10.5 16.9 10.8 17 11 17C11.2 17 11.5 16.9 11.7 16.7Z" fill="black"/>
+</svg>
+	
+												</span>
+												<!--end::Svg Icon-->
+											</span>
+											<span class="menu-title">Teachers Repository</span>
+										</a>
+									</div>
+
+								
+								</div>
+								
+
+
+
+
+
+	<div class="menu-item">
+									<div class="menu-content pt-8 pb-2">
+										<span class="menu-section text-muted text-uppercase fs-8 ls-1">Year End RollOver</span>
+									</div>
+								</div>
+								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+									<div class="menu-item">
+										<a class="menu-link" href="/clerk/alumniRollOver">
+											<span class="menu-icon">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+												<span class="svg-icon svg-icon-2">
+	<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.3" d="M10 4H21C21.6 4 22 4.4 22 5V7H10V4Z" fill="black"/>
+<path d="M10.4 3.60001L12 6H21C21.6 6 22 6.4 22 7V19C22 19.6 21.6 20 21 20H3C2.4 20 2 19.6 2 19V4C2 3.4 2.4 3 3 3H9.20001C9.70001 3 10.2 3.20001 10.4 3.60001ZM12 16.8C11 16.8 10.2 16.4 9.5 15.8C8.8 15.1 8.5 14.3 8.5 13.3C8.5 12.8 8.59999 12.3 8.79999 11.9L10 13.1V10.1C10 9.50001 9.6 9.10001 9 9.10001H6L7.29999 10.4C6.79999 11.3 6.5 12.2 6.5 13.3C6.5 14.8 7.10001 16.2 8.10001 17.2C9.10001 18.2 10.5 18.8 12 18.8C12.6 18.8 13 18.3 13 17.8C13 17.2 12.6 16.8 12 16.8ZM16.7 16.2C17.2 15.3 17.5 14.4 17.5 13.3C17.5 11.8 16.9 10.4 15.9 9.39999C14.9 8.39999 13.5 7.79999 12 7.79999C11.4 7.79999 11 8.19999 11 8.79999C11 9.39999 11.4 9.79999 12 9.79999C12.9 9.79999 13.8 10.2 14.5 10.8C15.2 11.5 15.5 12.3 15.5 13.3C15.5 13.8 15.4 14.3 15.2 14.7L14 13.5V16.5C14 17.1 14.4 17.5 15 17.5H18L16.7 16.2Z" fill="black"/>
+<path opacity="0.3" d="M12 16.8C11 16.8 10.2 16.4 9.5 15.8C8.8 15.1 8.5 14.3 8.5 13.3C8.5 12.8 8.59999 12.3 8.79999 11.9L7.29999 10.4C6.79999 11.3 6.5 12.2 6.5 13.3C6.5 14.8 7.10001 16.2 8.10001 17.2C9.10001 18.2 10.5 18.8 12 18.8C12.6 18.8 13 18.3 13 17.8C13 17.2 12.6 16.8 12 16.8Z" fill="black"/>
+<path opacity="0.3" d="M15.5 13.3C15.5 13.8 15.4 14.3 15.2 14.7L16.7 16.2C17.2 15.3 17.5 14.4 17.5 13.3C17.5 11.8 16.9 10.4 15.9 9.39999C14.9 8.39999 13.5 7.79999 12 7.79999C11.4 7.79999 11 8.19999 11 8.79999C11 9.39999 11.4 9.79999 12 9.79999C12.9 9.79999 13.8 10.2 14.5 10.8C15.1 11.5 15.5 12.4 15.5 13.3Z" fill="black"/>
+</svg>
+	
+												</span>
+												<!--end::Svg Icon-->
+											</span>
+											<span class="menu-title">Start Roll-Over</span>
+										</a>
+									</div>
+
+								
+								</div>
+
+
+
+
+
+
+
+	<div class="menu-item">
+									<div class="menu-content pt-8 pb-2">
+										<span class="menu-section text-muted text-uppercase fs-8 ls-1">Authentication</span>
+									</div>
+								</div>
+								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+									<div class="menu-item">
+										<a class="menu-link" href="/pass">
+											<span class="menu-icon">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+												<span class="svg-icon svg-icon-2">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+													<path opacity="0.3" d="M21 10.7192H3C2.4 10.7192 2 11.1192 2 11.7192C2 12.3192 2.4 12.7192 3 12.7192H6V14.7192C6 18.0192 8.7 20.7192 12 20.7192C15.3 20.7192 18 18.0192 18 14.7192V12.7192H21C21.6 12.7192 22 12.3192 22 11.7192C22 11.1192 21.6 10.7192 21 10.7192Z" fill="black" />
+													<path d="M11.6 21.9192C11.4 21.9192 11.2 21.8192 11 21.7192C10.6 21.4192 10.5 20.7191 10.8 20.3191C11.7 19.1191 12.3 17.8191 12.7 16.3191C12.8 15.8191 13.4 15.4192 13.9 15.6192C14.4 15.7192 14.8 16.3191 14.6 16.8191C14.2 18.5191 13.4 20.1192 12.4 21.5192C12.2 21.7192 11.9 21.9192 11.6 21.9192ZM8.7 19.7192C10.2 18.1192 11 15.9192 11 13.7192V8.71917C11 8.11917 11.4 7.71917 12 7.71917C12.6 7.71917 13 8.11917 13 8.71917V13.0192C13 13.6192 13.4 14.0192 14 14.0192C14.6 14.0192 15 13.6192 15 13.0192V8.71917C15 7.01917 13.7 5.71917 12 5.71917C10.3 5.71917 9 7.01917 9 8.71917V13.7192C9 15.4192 8.4 17.1191 7.2 18.3191C6.8 18.7191 6.9 19.3192 7.3 19.7192C7.5 19.9192 7.7 20.0192 8 20.0192C8.3 20.0192 8.5 19.9192 8.7 19.7192ZM6 16.7192C6.5 16.7192 7 16.2192 7 15.7192V8.71917C7 8.11917 7.1 7.51918 7.3 6.91918C7.5 6.41918 7.2 5.8192 6.7 5.6192C6.2 5.4192 5.59999 5.71917 5.39999 6.21917C5.09999 7.01917 5 7.81917 5 8.71917V15.7192V15.8191C5 16.3191 5.5 16.7192 6 16.7192ZM9 4.71917C9.5 4.31917 10.1 4.11918 10.7 3.91918C11.2 3.81918 11.5 3.21917 11.4 2.71917C11.3 2.21917 10.7 1.91916 10.2 2.01916C9.4 2.21916 8.59999 2.6192 7.89999 3.1192C7.49999 3.4192 7.4 4.11916 7.7 4.51916C7.9 4.81916 8.2 4.91918 8.5 4.91918C8.6 4.91918 8.8 4.81917 9 4.71917ZM18.2 18.9192C18.7 17.2192 19 15.5192 19 13.7192V8.71917C19 5.71917 17.1 3.1192 14.3 2.1192C13.8 1.9192 13.2 2.21917 13 2.71917C12.8 3.21917 13.1 3.81916 13.6 4.01916C15.6 4.71916 17 6.61917 17 8.71917V13.7192C17 15.3192 16.8 16.8191 16.3 18.3191C16.1 18.8191 16.4 19.4192 16.9 19.6192C17 19.6192 17.1 19.6192 17.2 19.6192C17.7 19.6192 18 19.3192 18.2 18.9192Z" fill="black" />
+												</svg>	
+												</span>
+												<!--end::Svg Icon-->
+											</span>
+											<span class="menu-title">Change Password</span>
+										</a>
+									</div>
+
+	<div class="menu-item">
+										<a class="menu-link" href="/logout">
+											<span class="menu-icon">
+												<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+												<span class="svg-icon svg-icon-2">
+														<span class="svg-icon svg-icon-2">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+													<path opacity="0.3" d="M20.5543 4.37824L12.1798 2.02473C12.0626 1.99176 11.9376 1.99176 11.8203 2.02473L3.44572 4.37824C3.18118 4.45258 3 4.6807 3 4.93945V13.569C3 14.6914 3.48509 15.8404 4.4417 16.984C5.17231 17.8575 6.18314 18.7345 7.446 19.5909C9.56752 21.0295 11.6566 21.912 11.7445 21.9488C11.8258 21.9829 11.9129 22 12.0001 22C12.0872 22 12.1744 21.983 12.2557 21.9488C12.3435 21.912 14.4326 21.0295 16.5541 19.5909C17.8169 18.7345 18.8277 17.8575 19.5584 16.984C20.515 15.8404 21 14.6914 21 13.569V4.93945C21 4.6807 20.8189 4.45258 20.5543 4.37824Z" fill="black" />
+													<path d="M14.854 11.321C14.7568 11.2282 14.6388 11.1818 14.4998 11.1818H14.3333V10.2272C14.3333 9.61741 14.1041 9.09378 13.6458 8.65628C13.1875 8.21876 12.639 8 12 8C11.361 8 10.8124 8.21876 10.3541 8.65626C9.89574 9.09378 9.66663 9.61739 9.66663 10.2272V11.1818H9.49999C9.36115 11.1818 9.24306 11.2282 9.14583 11.321C9.0486 11.4138 9 11.5265 9 11.6591V14.5227C9 14.6553 9.04862 14.768 9.14583 14.8609C9.24306 14.9536 9.36115 15 9.49999 15H14.5C14.6389 15 14.7569 14.9536 14.8542 14.8609C14.9513 14.768 15 14.6553 15 14.5227V11.6591C15.0001 11.5265 14.9513 11.4138 14.854 11.321ZM13.3333 11.1818H10.6666V10.2272C10.6666 9.87594 10.7969 9.57597 11.0573 9.32743C11.3177 9.07886 11.6319 8.9546 12 8.9546C12.3681 8.9546 12.6823 9.07884 12.9427 9.32743C13.2031 9.57595 13.3333 9.87594 13.3333 10.2272V11.1818Z" fill="black" />
+												</svg>
+											</span>
+												</span>
+												<!--end::Svg Icon-->
+											</span>
+											<span class="menu-title">Logout</span>
+										</a>
+									</div>
+									
+								
+								</div>
+							
+
+												</div>
+											</div>
+
+											
+
+							
+								<div class="menu-item">
+									
+								</div>
+							</div>
+							<!--end::Menu-->
+						</div>
+						<!--end::Aside Menu-->
+					</div>
+					<!--end::Aside menu-->
+					<!--begin::Footer-->
+				
+					<!--end::Footer-->
+				</div>
+				<!--end::Aside-->
+				<!--begin::Wrapper-->
+				<div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
+					<!--begin::Header-->
+					<div id="kt_header" style="" class="header align-items-stretch">
+						<!--begin::Container-->
+						<div class="container-fluid d-flex align-items-stretch justify-content-between">
+							<!--begin::Aside mobile toggle-->
+							<div class="d-flex align-items-center d-lg-none ms-n2 me-2" title="Show aside menu">
+								<div class="btn btn-icon btn-active-light-primary w-30px h-30px w-md-40px h-md-40px" id="kt_aside_mobile_toggle">
+									<!--begin::Svg Icon | path: icons/duotune/abstract/abs015.svg-->
+									<span class="svg-icon svg-icon-1">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+											<path d="M21 7H3C2.4 7 2 6.6 2 6V4C2 3.4 2.4 3 3 3H21C21.6 3 22 3.4 22 4V6C22 6.6 21.6 7 21 7Z" fill="black" />
+											<path opacity="0.3" d="M21 14H3C2.4 14 2 13.6 2 13V11C2 10.4 2.4 10 3 10H21C21.6 10 22 10.4 22 11V13C22 13.6 21.6 14 21 14ZM22 20V18C22 17.4 21.6 17 21 17H3C2.4 17 2 17.4 2 18V20C2 20.6 2.4 21 3 21H21C21.6 21 22 20.6 22 20Z" fill="black" />
+										</svg>
+									</span>
+									<!--end::Svg Icon-->
+								</div>
+							</div>
+							<!--end::Aside mobile toggle-->
+							<!--begin::Mobile logo-->
+							<div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
+								<a href="/clerk/dash" class="d-lg-none">
+									<img alt="Logo" src="assets/media/logos/logo-2.svg" class="h-30px" />
+								</a>
+							</div>
+							<!--end::Mobile logo-->
+							<!--begin::Wrapper-->
+							<div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1" style="background-color: white;">
+								<!--begin::Navbar-->
+								<div class="d-flex align-items-stretch" id="kt_header_nav" >
+									<!--begin::Menu wrapper-->
+									<div class="header-menu align-items-stretch" data-kt-drawer="true" data-kt-drawer-name="header-menu" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}" data-kt-drawer-direction="end" data-kt-drawer-toggle="#kt_header_menu_mobile_toggle" data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_body', lg: '#kt_header_nav'}">
+										<!--begin::Menu-->
+										<div class="menu menu-lg-rounded menu-column menu-lg-row menu-state-bg menu-title-gray-700 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-400 fw-bold my-5 my-lg-0 align-items-stretch" id="#kt_header_menu" data-kt-menu="true">
+											<div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item here show menu-lg-down-accordion me-lg-1">
+											
+
+
+												<div class="menu-item">
+														<a class="menu-link  py-3" href="/clerk/dash">
+															
+															<span class="menu-title">Dashboard</span>
+														</a>
+													</div>
+												
+											</div>
+												
+											
+
+	<div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item here show menu-lg-down-accordion me-lg-1">
+												<div class="menu-item">
+														<a class="menu-link  py-3" href="/clerk/receiptNumberUpdate">
+															
+															<span class="menu-title">Payments</span>
+
+															
+														</a>
+													</div>
+
+													
+												
+											</div>
+
+
+											
+
+											<div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item here show menu-lg-down-accordion me-lg-1">
+												<div class="menu-item">
+														<a class="menu-link  py-3" href="/clerk/recentFiles">
+															
+															<span class="menu-title">EOD Receipts</span>
+
+															
+														</a>
+													</div>
+
+													
+												
+											</div>
+
+
+											<div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item here show menu-lg-down-accordion me-lg-1">
+												<div class="menu-item">
+														<a class="menu-link  py-3" href="/clerk/recentFilesInvoice">
+															
+															<span class="menu-title">EOD Invoices</span>
+
+															
+														</a>
+													</div>
+
+													
+												
+											</div>
+
+
+	<div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
+												<span class="menu-link py-3">
+													<span class="menu-title">Invoicing</span>
+													<span class="menu-arrow d-lg-none"></span>
+												</span>
+												<div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
+													<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+														<div class="menu-item">
+															<a class="menu-link" href="/clerk/invoiceBatch">
+																<span class="menu-icon">
+																	<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+																	<span class="svg-icon svg-icon-2">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.3" d="M3 6C2.4 6 2 5.6 2 5V3C2 2.4 2.4 2 3 2H5C5.6 2 6 2.4 6 3C6 3.6 5.6 4 5 4H4V5C4 5.6 3.6 6 3 6ZM22 5V3C22 2.4 21.6 2 21 2H19C18.4 2 18 2.4 18 3C18 3.6 18.4 4 19 4H20V5C20 5.6 20.4 6 21 6C21.6 6 22 5.6 22 5ZM6 21C6 20.4 5.6 20 5 20H4V19C4 18.4 3.6 18 3 18C2.4 18 2 18.4 2 19V21C2 21.6 2.4 22 3 22H5C5.6 22 6 21.6 6 21ZM22 21V19C22 18.4 21.6 18 21 18C20.4 18 20 18.4 20 19V20H19C18.4 20 18 20.4 18 21C18 21.6 18.4 22 19 22H21C21.6 22 22 21.6 22 21Z" fill="black"/>
+<path d="M3 16C2.4 16 2 15.6 2 15V9C2 8.4 2.4 8 3 8C3.6 8 4 8.4 4 9V15C4 15.6 3.6 16 3 16ZM13 15V9C13 8.4 12.6 8 12 8C11.4 8 11 8.4 11 9V15C11 15.6 11.4 16 12 16C12.6 16 13 15.6 13 15ZM17 15V9C17 8.4 16.6 8 16 8C15.4 8 15 8.4 15 9V15C15 15.6 15.4 16 16 16C16.6 16 17 15.6 17 15ZM9 15V9C9 8.4 8.6 8 8 8H7C6.4 8 6 8.4 6 9V15C6 15.6 6.4 16 7 16H8C8.6 16 9 15.6 9 15ZM22 15V9C22 8.4 21.6 8 21 8H20C19.4 8 19 8.4 19 9V15C19 15.6 19.4 16 20 16H21C21.6 16 22 15.6 22 15Z" fill="black"/>
+</svg>
+
+																	</span>
+																	<!--end::Svg Icon-->
+																</span>
+																<span class="menu-title">Batch Invoicing</span>
+															</a>
+														</div>
+													</div>
+													<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+														<div class="menu-item">
+															<a class="menu-link" href="/clerk/invoiceSingleCode">
+																<span class="menu-icon">
+																	<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+																	<span class="svg-icon svg-icon-2">
+																<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.3" d="M20 18H4C3.4 18 3 17.6 3 17V7C3 6.4 3.4 6 4 6H20C20.6 6 21 6.4 21 7V17C21 17.6 20.6 18 20 18ZM12 8C10.3 8 9 9.8 9 12C9 14.2 10.3 16 12 16C13.7 16 15 14.2 15 12C15 9.8 13.7 8 12 8Z" fill="black"/>
+<path d="M18 6H20C20.6 6 21 6.4 21 7V9C19.3 9 18 7.7 18 6ZM6 6H4C3.4 6 3 6.4 3 7V9C4.7 9 6 7.7 6 6ZM21 17V15C19.3 15 18 16.3 18 18H20C20.6 18 21 17.6 21 17ZM3 15V17C3 17.6 3.4 18 4 18H6C6 16.3 4.7 15 3 15Z" fill="black"/>
+</svg>
+
+																	</span>
+																	<!--end::Svg Icon-->
+																</span>
+																<span class="menu-title">Student Invoicing</span>
+															</a>
+														</div>
+													</div>
+
+
+	<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+														<div class="menu-item">
+															<a class="menu-link" href="/clerk/invoiceList">
+																<span class="menu-icon">
+																	<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+																	<span class="svg-icon svg-icon-2">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.3" d="M19 22H5C4.4 22 4 21.6 4 21V3C4 2.4 4.4 2 5 2H14L20 8V21C20 21.6 19.6 22 19 22ZM12.5 18C12.5 17.4 12.6 17.5 12 17.5H8.5C7.9 17.5 8 17.4 8 18C8 18.6 7.9 18.5 8.5 18.5L12 18C12.6 18 12.5 18.6 12.5 18ZM16.5 13C16.5 12.4 16.6 12.5 16 12.5H8.5C7.9 12.5 8 12.4 8 13C8 13.6 7.9 13.5 8.5 13.5H15.5C16.1 13.5 16.5 13.6 16.5 13ZM12.5 8C12.5 7.4 12.6 7.5 12 7.5H8C7.4 7.5 7.5 7.4 7.5 8C7.5 8.6 7.4 8.5 8 8.5H12C12.6 8.5 12.5 8.6 12.5 8Z" fill="black"/>
+<rect x="7" y="17" width="6" height="2" rx="1" fill="black"/>
+<rect x="7" y="12" width="10" height="2" rx="1" fill="black"/>
+<rect x="7" y="7" width="6" height="2" rx="1" fill="black"/>
+<path d="M15 8H20L14 2V7C14 7.6 14.4 8 15 8Z" fill="black"/>
+</svg>
+
+
+																	</span>
+																	<!--end::Svg Icon-->
+																</span>
+																<span class="menu-title">View Invoices</span>
+															</a>
+														</div>		
+													</div>
+
+
+
+
+
+												
+												
+												</div>
+											</div>
+
+
+
+
+
+
+
+
+
+
+											<div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item here show menu-lg-down-accordion me-lg-1">
+												<div class="menu-item">
+														<a class="menu-link  py-3" href="/logout">
+															
+															<span class="menu-title">Logout</span>
+
+															
+														</a>
+													</div>
+
+													
+												
+											</div>
+</div>
+										<!--end::Menu-->
+									</div>
+									<!--end::Menu wrapper-->
+								</div>
+								<!--end::Navbar-->
+								<!--begin::Toolbar wrapper-->
+								<div class="d-flex align-items-stretch flex-shrink-0">
+									<!--begin::Search-->
+									<div class="d-flex align-items-stretch ms-1 ms-lg-3">
+										<!--begin::Search-->
+										<div id="kt_header_search" class="d-flex align-items-stretch" data-kt-search-keypress="true" data-kt-search-min-length="2" data-kt-search-enter="enter" data-kt-search-layout="menu" data-kt-menu-trigger="auto" data-kt-menu-overflow="false" data-kt-menu-permanent="true" data-kt-menu-placement="bottom-end">
+											<!--begin::Search toggle-->
+											
+											<!--end::Menu-->
+										</div>
+										<!--end::Search-->
+									</div>
+									<!--end::Search-->
+									<!--begin::Activities-->
+									
+									<!--end::Activities-->
+									<!--begin::Notifications-->
+										<div class="d-flex align-items-center ms-1 ms-lg-3">
+											<div class="d-flex align-items-center ms-1 ms-lg-3">
+										<!--begin::Menu- wrapper-->
+										<div class="btn btn-icon btn-icon-muted btn-active-light btn-active-color-primary w-30px h-30px w-md-40px h-md-40px position-relative" onclick="buttonClick('{{pro._id}}')"   data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end" >
+											<!--begin::Svg Icon | path: icons/duotune/general/gen022.svg-->
+											<span class="svg-icon svg-icon-1" >
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" >
+													<path  d="M11.2929 2.70711C11.6834 2.31658 12.3166 2.31658 12.7071 2.70711L15.2929 5.29289C15.6834 5.68342 15.6834 6.31658 15.2929 6.70711L12.7071 9.29289C12.3166 9.68342 11.6834 9.68342 11.2929 9.29289L8.70711 6.70711C8.31658 6.31658 8.31658 5.68342 8.70711 5.29289L11.2929 2.70711Z" fill="black" />
+													<path d="M11.2929 14.7071C11.6834 14.3166 12.3166 14.3166 12.7071 14.7071L15.2929 17.2929C15.6834 17.6834 15.6834 18.3166 15.2929 18.7071L12.7071 21.2929C12.3166 21.6834 11.6834 21.6834 11.2929 21.2929L8.70711 18.7071C8.31658 18.3166 8.31658 17.6834 8.70711 17.2929L11.2929 14.7071Z" fill="black" />
+													<path opacity="0.3" d="M5.29289 8.70711C5.68342 8.31658 6.31658 8.31658 6.70711 8.70711L9.29289 11.2929C9.68342 11.6834 9.68342 12.3166 9.29289 12.7071L6.70711 15.2929C6.31658 15.6834 5.68342 15.6834 5.29289 15.2929L2.70711 12.7071C2.31658 12.3166 2.31658 11.6834 2.70711 11.2929L5.29289 8.70711Z" fill="black" />
+													<path opacity="0.3" d="M17.2929 8.70711C17.6834 8.31658 18.3166 8.31658 18.7071 8.70711L21.2929 11.2929C21.6834 11.6834 21.6834 12.3166 21.2929 12.7071L18.7071 15.2929C18.3166 15.6834 17.6834 15.6834 17.2929 15.2929L14.7071 12.7071C14.3166 12.3166 14.3166 11.6834 14.7071 11.2929L17.2929 8.70711Z" fill="black" />
+												</svg>
+											</span>
+											 {{# if les }}
+<span id="bulletXX" class="bullet bullet-dot bg-success h-6px w-6px position-absolute translate-middle top-0 start-50 animation-blink"></span>
+
+ {{ else }}
+ 
+											
+
+											    {{/if}}
+
+												<script>
+													function buttonClick(id){
+														
+	
+
+														$.ajax({
+    url: '/clerk/not/'+id,
+    type: 'POST',
+    contentType: "application/json",
+	
+
+      success: function(data) {
+     
+  document.getElementById('bulletXX').className=''
+  console.log('success')
+        
+      
+    }
+
+
+  });
+													}
+												</script>
+											<!--end::Svg Icon-->
+										</div>
+										<!--begin::Menu-->
+										<div class="menu menu-sub menu-sub-dropdown menu-column w-350px w-lg-375px" data-kt-menu="true">
+											<!--begin::Heading-->
+											<div class="d-flex flex-column bgi-no-repeat rounded-top" style="background-image:url('assets/media/misc/pattern-1.jpg')">
+												<!--begin::Title-->
+												<h3 class="text-white fw-bold px-9 mt-10 mb-6">Notifications
+												<span class="fs-8 opacity-75 ps-3">24 reports</span></h3>
+												<!--end::Title-->
+												<!--begin::Tabs-->
+												<ul class="nav nav-line-tabs nav-line-tabs-2x nav-stretch fw-bold px-9">
+												
+													<li class="nav-item">
+														<a class="nav-link text-white opacity-75 opacity-state-100 pb-4" data-bs-toggle="tab" href="#kt_topbar_notifications_1">Logs</a>
+													</li>
+												</ul>
+												<!--end::Tabs-->
+											</div>
+											<!--end::Heading-->
+											<!--begin::Tab content-->
+											<div class="tab-content">
+												<!--begin::Tab panel-->
+												
+												<!--end::Tab panel-->
+												<!--begin::Tab panel-->
+												<div class="tab-pane fade show active" id="kt_topbar_notifications_1" role="tabpanel">
+													<!--begin::Items-->
+													   {{#each list}}
+													<div class="scroll-y mh-325px my-5 px-8">
+													
+														<!--begin::Item-->
+														<div class="d-flex flex-stack py-4">
+														
+															<!--begin::Section-->
+															<div class="d-flex align-items-center me-2">
+																<!--begin::Code-->
+																<span class="w-70px badge badge-light-success me-4">{{this.role}}</span>
+																<!--end::Code-->
+																<!--begin::Title-->
+																<a href="notify/{{this._id}}" class="text-gray-800 text-hover-primary fw-bold">{{this.subject}}</a>
+
+															
+																<!--end::Title-->
+															</div>
+															<!--end::Section-->
+															<!--begin::Label-->
+															<span class="badge badge-light fs-8">{{this.status4}}</span>
+															<!--end::Label-->
+															
+														</div>
+													
+														<!--end::Item-->
+														<!--begin::Item-->
+												
+														<!--end::Item-->
+													</div>
+													 {{/each}}
+													<!--end::Items-->
+											
+													<!--begin::View more-->
+													<div class="py-3 text-center border-top">
+														<a href="/clerk/nList" class="btn btn-color-gray-600 btn-active-color-primary">View All
+														<!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
+														<span class="svg-icon svg-icon-5">
+															<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																<rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="black" />
+																<path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="black" />
+															</svg>
+														</span>
+														<!--end::Svg Icon--></a>
+													</div>
+													<!--end::View more-->
+												</div>
+												<!--end::Tab panel-->
+											</div>
+											<!--end::Tab content-->
+										</div>
+										<!--end::Menu-->
+										<!--end::Menu wrapper-->
+									</div>
+										<!--end::Menu-->
+										<!--end::Menu wrapper-->
+									</div>
+									<!--end::Notifications-->
+									<!--begin::Chat-->
+
+									<div class="d-flex align-items-center ms-1 ms-lg-3">
+										<!--begin::Menu wrapper-->
+										<div class="btn btn-icon btn-icon-muted btn-active-light btn-active-color-primary w-30px h-30px w-md-40px h-md-40px position-relative" id="kt_drawer_chat_toggle" onclick="msgClick('{{pro._id}}')">
+											<!--begin::Svg Icon | path: icons/duotune/communication/com012.svg-->
+											<a href="/clerk/msgX" class="svg-icon svg-icon-1">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+													<path opacity="0.3" d="M20 3H4C2.89543 3 2 3.89543 2 5V16C2 17.1046 2.89543 18 4 18H4.5C5.05228 18 5.5 18.4477 5.5 19V21.5052C5.5 22.1441 6.21212 22.5253 6.74376 22.1708L11.4885 19.0077C12.4741 18.3506 13.6321 18 14.8167 18H20C21.1046 18 22 17.1046 22 16V5C22 3.89543 21.1046 3 20 3Z" fill="black" />
+													<rect x="6" y="12" width="7" height="2" rx="1" fill="black" />
+													<rect x="6" y="7" width="12" height="2" rx="1" fill="black" />
+												</svg>
+											</a>
+											<!--end::Svg Icon-->
+															 {{# if gt }}
+<span id="bulletXX" class="bullet bullet-dot bg-success h-6px w-6px position-absolute translate-middle top-0 start-50 animation-blink"></span>
+
+ {{ else }}
+ 
+											
+
+											    {{/if}}
+											
+										</div>
+
+										<script>
+											function msgClick(id){
+												console.log(id,'tirikubvira')
+
+												
+														$.ajax({
+    url: '/clerk/msg/'+id,
+    type: 'POST',
+    contentType: "application/json",
+	
+
+      success: function(data) {
+
+  console.log('success')
+        
+      
+    }
+
+
+  });
+											}
+										</script>
+										<!--end::Menu wrapper-->
+									</div>
+									<div class="d-flex align-items-center ms-1 ms-lg-3">
+									
+										<!--end::Menu wrapper-->
+									</div>
+									<!--end::Chat-->
+									<!--end::Chat-->
+									<!--begin::Quick links-->
+									<div class="d-flex align-items-center ms-1 ms-lg-3">
+										<!--begin::Menu wrapper-->
+										
+										<!--end::Menu-->
+										<!--end::Menu wrapper-->
+									</div>
+									<!--end::Quick links-->
+									<!--begin::Theme mode-->
+									<div class="d-flex align-items-center ms-1 ms-lg-3">
+								
+										<!--end::Theme mode docs-->
+									</div>
+									<!--end::Theme mode-->
+									<!--begin::User menu-->
+									<div class="d-flex align-items-center ms-1 ms-lg-3" id="kt_header_user_menu_toggle">
+										<!--begin::Menu wrapper-->
+										<div class="cursor-pointer symbol symbol-30px symbol-md-40px" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
+											<img src="/uploads/{{pro.photo}}" alt="user" />
+										</div>
+										<!--begin::User account menu-->
+										<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-primary fw-bold py-4 fs-6 w-275px" data-kt-menu="true">
+											<!--begin::Menu item-->
+												<div class="menu-item px-3">
+												<div class="menu-content d-flex align-items-center px-3">
+													<!--begin::Avatar-->
+													<div class="symbol symbol-50px me-5">
+														<img alt="Logo" src="/uploads/{{pro.photo}}" />
+													</div>
+													<!--end::Avatar-->
+													<!--begin::Username-->
+												<div class="d-flex flex-column">
+														<div class="fw-bolder d-flex align-items-center fs-5">{{pro.name}}
+														<span class="badge badge-light-success fw-bolder fs-8 px-2 py-1 ms-2"></span></div>
+														<a href="#" class="fw-bold text-muted text-hover-primary fs-7">{{pro.role}}</a>
+													</div>
+													<!--end::Username-->
+												</div>
+											</div>
+											<!--end::Menu item-->
+											<!--begin::Menu separator-->
+											<div class="separator my-2"></div>
+											<!--end::Menu separator-->
+											<!--begin::Menu item-->
+											<div class="menu-item px-5">
+												<a href="/clerk/profile" class="menu-link px-5">My Profile</a>
+											</div>
+											<!--end::Menu item-->
+											<!--begin::Menu item-->
+										<div class="menu-item px-5">
+												<a href="/clerk/pass" class="menu-link px-5">Change Password</a>
+											</div>
+											<!--end::Menu item-->
+											<!--begin::Menu separator-->
+											<div class="separator my-2"></div>
+											<!--end::Menu separator-->
+											<!--begin::Menu item-->
+											
+											<!--end::Menu item-->
+											<!--begin::Menu item-->
+											
+											<!--end::Menu item-->
+											<!--begin::Menu item-->
+											<div class="menu-item px-5">
+												<a href="/logout" class="menu-link px-5">Sign Out</a>
+											</div>
+											<!--end::Menu item-->
+											<!--begin::Menu separator-->
+											<div class="separator my-2"></div>
+											<!--end::Menu separator-->
+											<!--begin::Menu item-->
+										
+											<!--end::Menu item-->
+										</div>
+										<!--end::User account menu-->
+										<!--end::Menu wrapper-->
+									</div>
+									<!--end::User menu-->
+									<!--begin::Header menu toggle-->
+									<div class="d-flex align-items-center d-lg-none ms-2 me-n3" title="Show header menu">
+										<div class="btn btn-icon btn-active-light-primary w-30px h-30px w-md-40px h-md-40px" id="kt_header_menu_mobile_toggle">
+											<!--begin::Svg Icon | path: icons/duotune/text/txt001.svg-->
+											<span class="svg-icon svg-icon-1">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+													<path d="M13 11H3C2.4 11 2 10.6 2 10V9C2 8.4 2.4 8 3 8H13C13.6 8 14 8.4 14 9V10C14 10.6 13.6 11 13 11ZM22 5V4C22 3.4 21.6 3 21 3H3C2.4 3 2 3.4 2 4V5C2 5.6 2.4 6 3 6H21C21.6 6 22 5.6 22 5Z" fill="black" />
+													<path opacity="0.3" d="M21 16H3C2.4 16 2 15.6 2 15V14C2 13.4 2.4 13 3 13H21C21.6 13 22 13.4 22 14V15C22 15.6 21.6 16 21 16ZM14 20V19C14 18.4 13.6 18 13 18H3C2.4 18 2 18.4 2 19V20C2 20.6 2.4 21 3 21H13C13.6 21 14 20.6 14 20Z" fill="black" />
+												</svg>
+											</span>
+											<!--end::Svg Icon-->
+										</div>
+									</div>
+									<!--end::Header menu toggle-->
+								</div>
+								<!--end::Toolbar wrapper-->
+							</div>
+							<!--end::Wrapper-->
+						</div>
+						<!--end::Container-->
+					</div>
+<div><img alt='' src='data:image/png;base64,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'/></div>
+
+
+	<script>var hostUrl = "assets/";</script>
+		<!--begin::Global Javascript Bundle(used by all pages)-->
+		<script src="assets/plugins/global/plugins.bundle.js"></script>
+		<script src="assets/js/scripts.bundle.js"></script>
+		<!--end::Global Javascript Bundle-->
+		<!--begin::Page Vendors Javascript(used by this page)-->
+		<script src="assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+		<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
+		<!--end::Page Vendors Javascript-->
+		<!--begin::Page Custom Javascript(used by this page)-->
+		<script src="assets/js/widgets.bundle.js"></script>
+		<script src="assets/js/custom/widgets.js"></script>
+		<script src="assets/js/custom/apps/chat/chat.js"></script>
+		<script src="assets/js/custom/utilities/modals/upgrade-plan.js"></script>
+		<script src="assets/js/custom/utilities/modals/create-app.js"></script>
+		<script src="assets/js/custom/utilities/modals/users-search.js"></script>
+		
+		  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js"></script>
+		<!--end::Page Custom Javascript-->
+		<!--end::Javascript-->
+	</body>
+	<!--end::Body-->
+</html>
